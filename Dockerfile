@@ -17,7 +17,7 @@
 # COPY --from=builder /app/target/release/discord-bot /usr/local/bin
 # ENTRYPOINT ["/usr/local/bin/discord-bot"]
 
-FROM rustlang/rust
+FROM rustlang/rust:nightly
 
 WORKDIR /usr/src/utc-bot
 COPY . .
