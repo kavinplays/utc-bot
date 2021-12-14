@@ -17,11 +17,11 @@
 # COPY --from=builder /app/target/release/discord-bot /usr/local/bin
 # ENTRYPOINT ["/usr/local/bin/discord-bot"]
 
-FROM rustlang/rust:nightly
+FROM rustlang/rust
 
-WORKDIR /usr/src/discord-bot
+WORKDIR /usr/src/utc-bot
 COPY . .
 
 RUN cargo install --path .
 
-CMD ["discord-bot"]
+CMD ["utc-bot"]
